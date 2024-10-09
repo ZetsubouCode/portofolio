@@ -10,7 +10,7 @@ $(document).ready(function() {
 				'navigationPosition': 'right',
 			});
 			// Function to fetch and read the JSON file
-			fetch('../data.json')
+			fetch('../assets/data.json')
 				.then(response => response.json())
 				.then(data => {
 					// Loop through the 'projects' array in the JSON file
