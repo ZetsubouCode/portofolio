@@ -1,0 +1,27 @@
+{
+    "projects": [
+      {
+        "name": "Fake News Detection App",
+        "descriptin": "Machine learning model to identify fake news articles.",
+        "photo":"images/portfolio-img1.jpg",
+        "link_video":"",
+        "link_url_project":""
+    },
+    {
+        "name": "Augmented Reality Android App",
+        "description": "Mobile app for enhanced user interaction using AR.",
+        "photo":"images/portfolio-img2.jpg",
+        "link_video":"",
+        "link_url_project":""
+    },
+    {
+        "name": "Trading System Maintenance",
+        "description": "Developed and maintained trading systems for financial firms.",
+        "photo":"images/portfolio-img3.jpg",
+        "link_video":"",
+        "link_url_project":""
+      }
+    ],
+    "a":[]
+  }
+  
