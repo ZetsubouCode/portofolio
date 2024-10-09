@@ -22,5 +22,31 @@
           "link_url_project": ""
       }
   ],
-  "a": []
+  "what_i_do": [
+    {
+      "icon":"fa fa-database",
+      "title":"Database ERD Design",
+      "description":"I create clear and comprehensive Entity-Relationship Diagrams (ERDs) that visualize data models and relationships, ensuring efficient database design and facilitating effective communication with stakeholders."
+    },
+    {
+      "icon":"fa fa-laptop",
+      "title":"Backend Development",
+      "description":"I design and implement scalable backend solutions using Python, FastAPI, and PHP to ensure reliability and performance."
+    },
+    {
+      "icon":"fa fa-link",
+      "title":"API Development",
+      "description":"I specialize in building RESTful APIs for seamless integrations using FastAPI and Flask, enabling scalable communication between systems"
+    },
+    {
+      "icon":"fa fa-globe",
+      "title":"Web Development",
+      "description":"I utilize the Laravel framework to develop robust and scalable web applications, focusing on clean code, efficient MVC architecture, and responsive design to deliver an exceptional user experience."
+    },
+    {
+      "icon":"fa fa-hdd-o",
+      "title":"Local and Cloud Deployment & Microservices",
+      "description":"Deploying and managing microservices in either local or cloud environments (GCP), ensuring efficiency, scalability, and uptime."
+    }
+  ]
 }
