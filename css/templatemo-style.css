@@ -303,9 +303,8 @@ h1,h2,h3,h4,h5
         position: relative;
         margin-bottom: 30px;
     }
-#portfolio .portfolio-thumb .portfolio-overlay
-    {
-        background: #D43F52;
+    #portfolio .portfolio-thumb .portfolio-overlay {
+        background: rgba(0, 0, 0, 0.6); /* Black with transparency */
         top: 0;
         left: 0;
         right: 0;
@@ -314,15 +313,28 @@ h1,h2,h3,h4,h5
         width: 100%;
         height: 100%;
         position: absolute;
-        padding-top: 60px;
+        display: flex; /* Center content */
+        align-items: center; /* Vertically align content */
+        justify-content: center; /* Horizontally align content */
         transition: all 0.4s ease-in-out;
+        backdrop-filter: blur(5px); /* Blur effect */
+        -webkit-backdrop-filter: blur(5px); /* Safari support */
     }
-#portfolio .portfolio-thumb:hover .portfolio-overlay
-    {
+    
+    #portfolio .portfolio-thumb .portfolio-overlay h3 {
+        font-size: 2rem; /* Larger font size for the title */
+        color: #fff; /* White text for visibility */
+        margin: 0;
+        text-align: center;
+        font-weight: bold; /* Bold text for emphasis */
+    }
+    
+    #portfolio .portfolio-thumb:hover .portfolio-overlay {
         cursor: pointer;
         opacity: 0.8;
-        transform: scale(0.9);
+        transform: scale(0.9); /* Slight zoom-out effect */
     }
+    
 /* end portfolio */
 
 /* start contact */
@@ -421,4 +433,70 @@ footer hr
 
 p{
     color:#ffffff;
+}
+
+.modal {
+    display: none;
+    position: absolute; /* Allows for dynamic positioning */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly darker background */
+}
+
+.modal-content {
+    position: absolute; /* Allows for dynamic positioning via JavaScript */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: #121212; /* Dark background for content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1); /* Softer shadow effect */
+    width: 80%;
+    max-width: 700px;
+    color: #e0e0e0; /* Light text for contrast */
+}
+
+.modal-body iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    border: none;
+    background-color: #000; /* Ensures iframe fits with dark mode */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #e0e0e0; /* Light color for the close button */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5252; /* Highlight on hover for better visibility */
+    text-decoration: none;
+}
+
+.github-link a i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.github-link a:hover {
+    color: #fff; /* Highlighted text on hover */
+    background: linear-gradient(45deg, #3b5998, #1e90ff); /* Smooth gradient hover effect */
+    border-color: #1e90ff; /* Border matches hover color */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+.github-link a:active {
+    transform: scale(0.95); /* Click feedback */
 }

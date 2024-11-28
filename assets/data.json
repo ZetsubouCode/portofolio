@@ -1,25 +1,60 @@
 {
   "projects": [
       {
-          "name": "Fake News Detection App",
-          "description": "Machine learning model to identify fake news articles.",
+          "name": "BudgetDiary",
+          "description": "Discord bot that can manage your monthly expense.",
           "photo": "images/portfolio-img1.jpg",
-          "link_video": "https://www.youtube.com/embed/xubT7VHjNFY?si=eITfG63mdAS0s_sD&start=1",
-          "link_url_project": ""
+          "link_video": "",
+          "link_url_project": "https://github.com/ZetsubouCode/BudgetDiary"
       },
       {
-          "name": "Augmented Reality Android App",
-          "description": "Mobile app for enhanced user interaction using AR.",
+          "name": "E-commerce",
+          "description": "Simple e-commerce website for selling products.",
+          "photo": "images/portfolio-img1.jpg",
+          "link_video": "",
+          "link_url_project": "https://github.com/ZetsubouCode/e-commerce"
+      },
+      {
+          "name": "cms-dashboard",
+          "description": "CMS Dashboard for managing e-commerce website content.",
+          "photo": "images/portfolio-img1.jpg",
+          "link_video": "",
+          "link_url_project": "https://github.com/ZetsubouCode/cms-dashboard"
+      },
+      {
+          "name": "MailerAPI",
+          "description": "Simple Mailer API built using FastAPI, which allows sending emails with attachments, CC, and BCC functionality using Gmail's SMTP server.",
+          "photo": "images/portfolio-img1.jpg",
+          "link_video": "",
+          "link_url_project": "https://github.com/ZetsubouCode/MailerAPI"
+      },
+      {
+          "name": "CDNlike-API",
+          "description": "This is an API to mimic CDN server.",
+          "photo": "images/portfolio-img1.jpg",
+          "link_video": "",
+          "link_url_project": "https://github.com/ZetsubouCode/CDNlike-API"
+      },
+      {
+          "name": "PaymentSystemBot",
+          "description": "Telegram bot that i used for workaround with payment system.",
+          "photo": "images/portfolio-img1.jpg",
+          "link_video": "",
+          "link_url_project": "https://github.com/ZetsubouCode/PaymentSystemBot"
+      },
+      {
+          "name": "TextDungeon-Discord-Bot (Nusantara Dungeon)",
+          "description": "A discord bot that actually an interactive text based dungeon crawler game",
           "photo": "images/portfolio-img2.jpg",
           "link_video": "",
-          "link_url_project": ""
+          "link_url_project": "https://github.com/ZetsubouCode/TextDungeon-Discord-Bot"
       },
       {
-          "name": "Trading System Maintenance",
-          "description": "Developed and maintained trading systems for financial firms.",
+          "name": "GSP-Algorithm",
+          "description": "Implementation of GSP algorithm",
           "photo": "images/portfolio-img3.jpg",
           "link_video": "",
-          "link_url_project": ""
+          "link_url_project": "https://github.com/ZetsubouCode/GSP-Algorithm"
       }
   ],
   "what_i_do": [

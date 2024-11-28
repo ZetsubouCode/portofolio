@@ -18,6 +18,7 @@ $(document).ready(function() {
 			closeModal.addEventListener('click', () => {
 				modal.style.display = 'none';
 				modalVideo.src = ''; // Stop the video
+				modalImage.src = '';
 			});
 			
 			// Close modal when clicking outside the content
@@ -28,7 +29,51 @@ $(document).ready(function() {
 				}
 			});
 
-			fetch('https://zetsuboucode.github.io/portofolio/assets/data.json')
+			// Adjust modal position on scroll and resize
+			document.addEventListener('scroll', () => {
+				if (modal.style.display === 'block') {
+				adjustModalPosition();
+				}
+			});
+			
+			window.addEventListener('resize', () => {
+				if (modal.style.display === 'block') {
+				adjustModalPosition();
+				}
+			});
+			function adjustModalPosition() {
+				const modalContent = modal.querySelector('.modal-content');
+				modalContent.style.top = `${window.scrollY + window.innerHeight / 2 - modalContent.offsetHeight / 2}px`;
+			}
+			function openModal(videoURL,description,githubLink) {
+				const placeholderImage = 'http://127.0.0.1:5500/images/video-not-found.jpg'; // Replace with your fallback image path
+			  
+				if (videoURL && videoURL.startsWith('https://www.youtube.com/embed/')) {
+				  modalVideo.style.display = 'block'; // Show the iframe
+				  modalImage.style.display = 'none'; // Hide the image
+				  modalVideo.src = videoURL; // Set the YouTube URL
+				} else {
+				  modalVideo.style.display = 'none'; // Hide the iframe
+				  modalImage.style.display = 'block'; // Show the image
+				  modalImage.src = placeholderImage; // Set the fallback image
+				}
+
+				const projectDescription = document.getElementById('projectDescription');
+				projectDescription.textContent = description || 'No description available for this project.';
+
+				// Populate the GitHub link
+				const githubLinkElement = document.getElementById('githubLink');
+				if (githubLink) {
+					githubLinkElement.href = githubLink;
+					githubLinkElement.style.display = 'inline-block'; 
+				} else {
+					githubLinkElement.style.display = 'none'; // Hide the link if it's not provided
+				}
+			  
+				modal.style.display = 'block'; // Show the modal
+				adjustModalPosition(); // Adjust modal position
+			  }
+			fetch('http://127.0.0.1:5500/assets/data.json')
 				.then(response => response.json())
 				.then(data => {
 					// Loop through the 'projects' array in the JSON file
@@ -56,33 +101,24 @@ $(document).ready(function() {
 						const projectDiv = document.createElement('div');
 						projectDiv.innerHTML = `
 						<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-							<div class="portfolio-thumb" data-video="${project.link_video}">
-							<img src="${project.photo}" class="img-responsive" alt="${project.name}">
-							<div class="portfolio-overlay">
-								<h4>${project.name}</h4>
-								<h5>${project.description}</h5>
-							</div>
+							<div class="portfolio-thumb" data-video="${project.link_video}" data-desc="${project.description}" data-url="${project.link_url_project}">
+								<img src="${project.photo}" class="img-responsive" alt="${project.name}">
+								<div class="portfolio-overlay">
+									<h3>${project.name}</h3> <!-- Title only, made bigger with a new heading tag -->
+								</div>
 							</div>
 						</div>
 						`;
-
-						// Add click event for modal
-						projectDiv.querySelector('.portfolio-thumb').addEventListener('click', (event) => {
-							const videoURL = event.currentTarget.getAttribute('data-video');
-							console.log(1111);
-							console.log(videoURL);
-							// Check if the URL is valid
-							if (videoURL && videoURL.startsWith('https://www.youtube.com/embed/')) {
-							  modal.style.display = 'block';
-							  modalVideo.src = videoURL; // Set YouTube embed URL
-							} else {
-							  alert('No valid video available for this project.');
-							}
-						  });
 						projectList.appendChild(projectDiv);
-						console.log('Link Video from JSON:', project.link_video); // Check JSON content
-						console.log('Set data-video:', projectDiv.querySelector('.portfolio-thumb').getAttribute('data-video')); // Check HTML attribute
 					});
+					document.querySelectorAll('.portfolio-thumb').forEach((thumb) => {
+						thumb.addEventListener('click', (event) => {
+						  const videoURL = event.currentTarget.getAttribute('data-video');
+						  const description = event.currentTarget.getAttribute('data-desc');
+						  const githubURL = event.currentTarget.getAttribute('data-url');
+						  openModal(videoURL,description,githubURL);
+						});
+					  });
 				})
 				.catch(error => console.error('Error loading JSON:', error));
 
