@@ -46,7 +46,7 @@ $(document).ready(function() {
 				modalContent.style.top = `${window.scrollY + window.innerHeight / 2 - modalContent.offsetHeight / 2}px`;
 			}
 			function openModal(videoURL,description,githubLink) {
-				const placeholderImage = 'http://127.0.0.1:5500/images/video-not-found.jpg'; // Replace with your fallback image path
+				const placeholderImage = 'https://zetsuboucode.github.io/portofolio/images/video-not-found.jpg'; // Replace with your fallback image path
 			  
 				if (videoURL && videoURL.startsWith('https://www.youtube.com/embed/')) {
 				  modalVideo.style.display = 'block'; // Show the iframe
@@ -73,7 +73,7 @@ $(document).ready(function() {
 				modal.style.display = 'block'; // Show the modal
 				adjustModalPosition(); // Adjust modal position
 			  }
-			fetch('http://127.0.0.1:5500/assets/data.json')
+			fetch('https://zetsuboucode.github.io/portofolio/assets/data.json')
 				.then(response => response.json())
 				.then(data => {
 					// Loop through the 'projects' array in the JSON file
