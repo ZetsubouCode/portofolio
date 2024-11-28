@@ -166,6 +166,17 @@
 				</div>
 			</div>
 			<!-- end contact -->
+			
+			<!-- start modal -->
+			<div id="projectModal" class="modal">
+				<div class="modal-content">
+				  <span class="close">&times;</span>
+				  <div class="modal-body">
+					<iframe id="projectVideo" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				</div>
+			  </div>
+			<!-- end modal -->
 
 	
 			<!-- start footer -->
@@ -186,6 +197,51 @@
 			<!-- end footer -->
 
 	</div>
+	<style>
+		.modal {
+		  display: none;
+		  position: fixed;
+		  z-index: 1000;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: rgba(0, 0, 0, 0.8);
+		}
+	  
+		.modal-content {
+		  margin: 10% auto;
+		  padding: 20px;
+		  width: 70%;
+		  background-color: #fff;
+		  border-radius: 10px;
+		  position: relative;
+		  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+		}
+	  
+		.modal-body iframe {
+		  display: block;
+		  margin: auto;
+		}
+	  
+		.close {
+		  color: #aaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		  position: absolute;
+		  top: 10px;
+		  right: 20px;
+		  cursor: pointer;
+		}
+	  
+		.close:hover, .close:focus {
+		  color: black;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+	  </style>
 
 		<!-- jQuery -->
 		<script src="js/jquery.js"></script>

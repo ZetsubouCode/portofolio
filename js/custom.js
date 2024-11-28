@@ -54,6 +54,61 @@ $(document).ready(function() {
 
 		});
 
+		document.addEventListener('DOMContentLoaded', () => {
+			const projectList = document.getElementById('project-list');
+			const modal = document.getElementById('projectModal');
+			const modalVideo = document.getElementById('projectVideo');
+			const closeModal = document.querySelector('.close');
+		  
+			// Close modal function
+			closeModal.addEventListener('click', () => {
+			  modal.style.display = 'none';
+			  modalVideo.src = ''; // Stop the video
+			});
+		  
+			// Close modal when clicking outside the content
+			window.addEventListener('click', (event) => {
+			  if (event.target === modal) {
+				modal.style.display = 'none';
+				modalVideo.src = ''; // Stop the video
+			  }
+			});
+		  
+			// Fetch JSON and populate projects
+			fetch('https://zetsuboucode.github.io/portofolio/assets/data.json')
+			  .then((response) => response.json())
+			  .then((data) => {
+				data.projects.forEach((project, index) => {
+				  const projectDiv = document.createElement('div');
+				  projectDiv.innerHTML = `
+					<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					  <div class="portfolio-thumb" data-index="${index}">
+						<img src="${project.photo}" class="img-responsive" alt="${project.name}">
+						<div class="portfolio-overlay">
+						  <h4>${project.name}</h4>
+						  <h5>${project.description}</h5>
+						</div>
+					  </div>
+					</div>
+				  `;
+		  
+				  // Add click event for modal
+				  projectDiv.querySelector('.portfolio-thumb').addEventListener('click', () => {
+					if (project.link_video) {
+					  modal.style.display = 'block';
+					  modalVideo.src = project.link_video; // Set YouTube URL
+					} else {
+					  alert('No video available for this project.');
+					}
+				  });
+		  
+				  projectList.appendChild(projectDiv);
+				});
+			  })
+			  .catch((error) => console.error('Error loading JSON:', error));
+		  });
+		  
+
 // wow
 $(function()
 {
