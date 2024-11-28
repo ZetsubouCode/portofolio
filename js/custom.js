@@ -73,7 +73,7 @@ $(document).ready(function() {
 				modal.style.display = 'block'; // Show the modal
 				adjustModalPosition(); // Adjust modal position
 			  }
-			fetch('https://zetsuboucode.github.io/portofolio/assets/data.json')
+			fetch('http://127.0.0.1:5500/assets/data.json')
 				.then(response => response.json())
 				.then(data => {
 					// Loop through the 'projects' array in the JSON file
@@ -102,7 +102,7 @@ $(document).ready(function() {
 						projectDiv.innerHTML = `
 						<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
 							<div class="portfolio-thumb" data-video="${project.link_video}" data-desc="${project.description}" data-url="${project.link_url_project}">
-								<img src="${project.photo}" class="img-responsive" alt="${project.name}">
+								<img src="${project.photo}" class="img-responsive" alt="${project.name}" style="width: 600px; height: 300px; object-fit: cover;">
 								<div class="portfolio-overlay">
 									<h3>${project.name}</h3> <!-- Title only, made bigger with a new heading tag -->
 								</div>

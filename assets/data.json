@@ -38,7 +38,7 @@
       {
           "name": "PaymentSystemBot",
           "description": "Telegram bot that i used for workaround with payment system.",
-          "photo": "images/bot-telegram.jpg",
+          "photo": "images/bot-telegram.png",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/PaymentSystemBot"
       },
