@@ -3,56 +3,56 @@
       {
           "name": "BudgetDiary",
           "description": "Discord bot that can manage your monthly expense.",
-          "photo": "images/portfolio-img1.jpg",
+          "photo": "images/bot-discord.jpg",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/BudgetDiary"
       },
       {
           "name": "E-commerce",
           "description": "Simple e-commerce website for selling products.",
-          "photo": "images/portfolio-img1.jpg",
+          "photo": "images/web.webp",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/e-commerce"
       },
       {
           "name": "cms-dashboard",
           "description": "CMS Dashboard for managing e-commerce website content.",
-          "photo": "images/portfolio-img1.jpg",
+          "photo": "images/web.webp",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/cms-dashboard"
       },
       {
           "name": "MailerAPI",
           "description": "Simple Mailer API built using FastAPI, which allows sending emails with attachments, CC, and BCC functionality using Gmail's SMTP server.",
-          "photo": "images/portfolio-img1.jpg",
+          "photo": "images/api.webp",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/MailerAPI"
       },
       {
           "name": "CDNlike-API",
           "description": "This is an API to mimic CDN server.",
-          "photo": "images/portfolio-img1.jpg",
+          "photo": "images/api.webp",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/CDNlike-API"
       },
       {
           "name": "PaymentSystemBot",
           "description": "Telegram bot that i used for workaround with payment system.",
-          "photo": "images/portfolio-img1.jpg",
+          "photo": "images/bot-telegram.jpg",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/PaymentSystemBot"
       },
       {
           "name": "TextDungeon-Discord-Bot (Nusantara Dungeon)",
           "description": "A discord bot that actually an interactive text based dungeon crawler game",
-          "photo": "images/portfolio-img2.jpg",
+          "photo": "images/bot-discord.jpg",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/TextDungeon-Discord-Bot"
       },
       {
           "name": "GSP-Algorithm",
           "description": "Implementation of GSP algorithm",
-          "photo": "images/portfolio-img3.jpg",
+          "photo": "images/script-python.jpg",
           "link_video": "",
           "link_url_project": "https://github.com/ZetsubouCode/GSP-Algorithm"
       }
