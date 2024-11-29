@@ -73,7 +73,7 @@ $(document).ready(function() {
 				modal.style.display = 'block'; // Show the modal
 				adjustModalPosition(); // Adjust modal position
 			  }
-			fetch('http://127.0.0.1:5500/assets/data.json')
+			fetch('https://zetsuboucode.github.io/portofolio/assets/data.json')
 				.then(response => response.json())
 				.then(data => {
 					// Loop through the 'projects' array in the JSON file
