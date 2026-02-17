@@ -22,9 +22,7 @@
 		<!-- font-awesome -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<!-- google font -->
-		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
-		<!-- fullpage -->
-		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 		<!-- custom -->
 		<link rel="stylesheet" href="css/templatemo-style.css">
 		 <!-- Attribution for Flaticon icons Code icons created by juicy_fish - Flaticon-->
@@ -39,7 +37,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2"></div>
-						<div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+						<div class="col-md-8 wow fadeIn hero-content" data-wow-delay="0.9s">
 							<h3>Backend Engineering with a Focus on Problem Solving</h3>
 							<h1>Kevin Cadell Ignatius</h1>
 							<h2 class="rotate">PYTHON DEVELOPER, BACKEND ENGINEER, API DEVELOPER</h2>
@@ -61,7 +59,7 @@
 						</div>
 					</div>
 					
-					<div id="what-i-do" class="row">
+					<div id="what-i-do" class="row" aria-live="polite">
 
 					</div>
 				</div>
@@ -72,13 +70,13 @@
 			<div id="about" class="section">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
+						<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft about-card" data-wow-delay="0.9s">
 							<h2>ABOUT ME</h2>
 							<h4>BACKEND DEVELOPER &AMP; API SPECIALIST</h4>
 							<p>I'm a backend developer with over 2 years of experience across multiple industries, specializing in Python, PHP, and scalable systems. I thrive on delivering clean, efficient code and scalable solutions, from microservices to full-stack applications.</p>
 							<p>I also have experience with project management, including UML and ERD design, cloud deployments, and continuous system improvement.</p>
 						</div>
-						<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
+						<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight about-card" data-wow-delay="0.9s">
 							<h2>TECH STACK</h2>
 					
 							<span>Languages: Python, PHP, JavaScript, HTML</span>
@@ -112,11 +110,9 @@
 					<div class="row">
 						<div class="col-md-12">
 							<h2 class="wow bounce">RECENT PROJECTS</h2>
+							<div id="project-list" class="row" aria-live="polite">
+							</div>
 						</div>
-						
-						<div id ="project-list">
-						</div>
-	
 					</div>
 				</div>
 			</div>
@@ -127,30 +123,30 @@
 				<div class="container">
 					<div class="row">
 						<!-- Address Section on the Left -->
-						<div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp contact-card" data-wow-delay="0.6s">
 							<address>
 								<p class="contact-title">CONTACT ME</p>
-								<p><i class="fa fa-phone"></i> (+62)823-2523-9230</p>
-								<p><i class="fa fa-envelope-o"></i> kevincatius@gmail.com</p>
+								<p><i class="fa fa-phone"></i> <a href="tel:+6282325239230">(+62)823-2523-9230</a></p>
+								<p><i class="fa fa-envelope-o"></i> <a href="mailto:kevincatius@gmail.com">kevincatius@gmail.com</a></p>
 								<p><i class="fa fa-map-marker"></i> Salatiga, Central Java, Indonesia</p>
 							</address>
 						</div>
 					
 						<!-- Let's Connect Section on the Right -->
-						<div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp connect-card" data-wow-delay="0.6s">
 							<h2>Let's Connect!</h2>
 							<p>If you're interested in working together, check out my resume or connect with me on LinkedIn or GitHub.</p>
-							<div class="btn-group" role="group" style="display: flex; flex-wrap: wrap;">
-								<a href="CV.pdf" class="btn btn-primary me-2 mb-2" style="flex: 1; display: inline-flex; align-items: center; padding: 5px 10px; font-size: 14px; background-color: #007bff; color: #fff; border: 1px solid transparent; text-decoration: none; max-width: 180px;">
-									<i class="fa fa-file-pdf-o" style="font-size: 1em; margin-right: 5px; margin-top: 3px;background: none; border: none;"></i>
+							<div class="btn-group contact-actions" role="group">
+								<a href="CV.pdf" download class="btn contact-btn contact-btn-primary">
+									<i class="fa fa-download"></i>
 									Download My Resume
 								</a>
-								<a href="https://github.com/ZetsubouCode" target="_blank" class="btn btn-default me-2 mb-2" style="flex: 1; display: inline-flex; align-items: center; padding: 5px 10px; font-size: 14px; background-color: #f8f9fa; color: #333; border: 1px solid #ced4da; text-decoration: none; max-width: 180px;">
-									<i class="fa fa-github" style="font-size: 1em; margin-right: -5px;margin-top: 3px; color: #333; background: none; border: none;"></i>
+								<a href="https://github.com/ZetsubouCode" target="_blank" rel="noopener" class="btn contact-btn contact-btn-ghost">
+									<i class="fa fa-github"></i>
 									Visit My GitHub
 								</a>
-								<a href="https://www.linkedin.com/in/kevin-ignatius-b531a1113" target="_blank" class="btn btn-default mb-2" style="flex: 1; display: inline-flex; align-items: center; padding: 5px 10px; font-size: 14px; background-color: #f8f9fa; color: #333; border: 1px solid #ced4da; text-decoration: none; max-width: 180px;">
-									<i class="fa fa-linkedin-square" style="font-size: 1em; margin-right: 5px;margin-top: 3px; color: #0077b5; background: none; border: none;"></i>
+								<a href="https://www.linkedin.com/in/kevin-ignatius-b531a1113" target="_blank" rel="noopener" class="btn contact-btn contact-btn-ghost">
+									<i class="fa fa-linkedin-square"></i>
 									Connect on LinkedIn
 								</a>
 								
@@ -163,15 +159,15 @@
 			<!-- end contact -->
 			
 			<!-- start modal -->
-			<div id="projectModal" class="modal">
+			<div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
 				<div class="modal-content">
-				  <span class="close">&times;</span>
+				  <span class="close" role="button" tabindex="0" aria-label="Close modal">&times;</span>
 				  <div class="modal-body">
 					<iframe id="projectVideo" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-					<img id="modalImage" src="" alt="Video not available" style="display: none; width: 100%; height: auto;" />
-					<div id="projectDescription" style="margin-top: 20px; text-align: justify;"></div>
+					<img id="modalImage" src="" alt="Video not available" />
+					<div id="projectDescription"></div>
 					<div id="githubLinkContainer">
-						<a id="githubLink" href="#" target="_blank" class="github-link">
+						<a id="githubLink" href="#" target="_blank" rel="noopener" class="github-link">
 							<i class="fa fa-github"></i> View on GitHub
 						</a>
 					</div>
@@ -188,11 +184,11 @@
 					<div class="row">
 						<div class="col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="1s">
 							<ul class="social-icon">
-								<li><a href="https://github.com/ZetsubouCode" class="fa fa-github"></a></li>
-								<li><a href="https://www.linkedin.com/in/kevin-ignatius-b531a1113" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
+								<li><a href="https://github.com/ZetsubouCode" rel="noopener" class="fa fa-github" aria-label="GitHub"></a></li>
+								<li><a href="https://www.linkedin.com/in/kevin-ignatius-b531a1113" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn"></a></li>
+								<li><a href="mailto:kevincatius@gmail.com" class="fa fa-envelope" aria-label="Email"></a></li>
 							</ul>
-							<p>© 2024 Kevin Ignatius Portfolio</p>
+							<p>Copyright 2024 Kevin Ignatius Portfolio</p>
 						</div>
 					</div>
 				</div>
@@ -205,8 +201,6 @@
 		<script src="js/jquery.js"></script>
 		<!-- bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- fullpage -->
-		<script src="js/jquery.fullPage.js"></script>
 		<!-- smoothScroll -->
 		<script src="js/smoothscroll.js"></script>
 		<!-- wow -->
